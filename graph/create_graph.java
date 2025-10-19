@@ -6,7 +6,7 @@ public static void addedge(ArrayList<ArrayList<Integer>> adj,int u,int v){
   adj.get(v).add(u);
 }
 
-public static void displaygraph(ArrayList<ArrayList<Integer>> adj){
+public static void traversel(ArrayList<ArrayList<Integer>> adj){
   for(int i=0;i<adj.size();i++){ // number of vertices
     for(int j=0;j<adj.get(i).size();j++){ // neighnors of vertex i
       System.out.print(adj.get(i).get(j)+" ");
@@ -27,6 +27,6 @@ public static void displaygraph(ArrayList<ArrayList<Integer>> adj){
     addedge(adj,1,2);
     addedge(adj,2,0);
 
-    displaygraph(adj);
+    traversel(adj);
   }
 }
