@@ -3,13 +3,11 @@ import java.util.*;
 public class bfs4 {
 
   public static ArrayList<Integer> bf(ArrayList<ArrayList<Integer>> adj){
-
     int v=adj.size();
     int s=2;
     ArrayList<Integer> res=new ArrayList<>();
     Queue<Integer> q=new LinkedList<>();
     boolean[] vis=new boolean[v];
-
     q.add(s);
     vis[s]=true;
     while(!q.isEmpty()){
@@ -35,8 +33,8 @@ public class bfs4 {
     adj.add(new ArrayList<>(Arrays.asList(2, 3)));
 
     ArrayList<Integer> ans = bf(adj);
-    for (int i : ans) {
-      System.out.print(i + " ");
+    for (int x : ans) {
+      System.out.print(x + " ");
     }
     System.out.println();
   }
