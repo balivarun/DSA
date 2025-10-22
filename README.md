@@ -20,7 +20,7 @@ This repository contains a set of data-structures and algorithm examples (Java).
 - `Recursion&Backtracking/` — Recursive and backtracking problems.
 - `searching_Algo/` — Searching algorithms (binary search, etc.).
 - `Sliding_Window/` — Sliding window pattern problems.
-- `Soring_Algo/` — Sorting algorithm implementations (note: folder name contains a typo `Soring_Algo`).
+- `Sorting_Algo/` — Sorting algorithm implementations (previously `Soring_Algo`).
 - `Stack/` — Stack examples.
 - `String/` — String algorithm problems.
 - `Trees/` — Tree data structures and algorithms.
@@ -44,13 +44,24 @@ java -cp bin doubly_linkedlist.example.DoublyExample
 
 If you prefer compiling a single folder or file, point `javac` at the specific `.java` files and include any needed dependencies.
 
-## Java version
-Terminal runs in this workspace showed Java 17 being used. When you upgrade your system JDK to Java 21, ensure `JAVA_HOME` and your editor/IDE settings point to the new JDK, then re-run the compile commands above.
+## Java version and upgrading to Java 21
+Workspace runs indicate Java 17 is currently used by the editor/terminal. To move to Java 21 (latest LTS):
+
+- Install JDK 21 (package manager, SDKMAN, or download from a trusted vendor).
+- Set `JAVA_HOME` to the JDK 21 install path and put `$JAVA_HOME/bin` earlier in your `PATH`.
+- Restart your editor/IDE (or update its JDK setting) and verify with:
+
+```bash
+java -version
+echo $JAVA_HOME
+```
+
+If you'd like, I can add a simple Maven or Gradle build to pin the Java toolchain and make upgrading smoother.
 
 ## Notes & tips
-- There is no centralized build file (Maven/Gradle) detected in the workspace root; consider adding one if you want reproducible builds and dependency management.
-- Folder `Soring_Algo` appears to contain a typo. Rename if desired.
+- There is no centralized build file (Maven/Gradle) detected in the workspace root; adding one gives reproducible builds and easy toolchain configuration.
+- Folder `Sorting_Algo` was previously named `Soring_Algo` — consider renaming to keep names consistent.
 - Keep each example small and package-qualified so `java -cp bin <package.Class>` works consistently.
 
 ---
-Generated on: 2025-10-19
+Generated on: 2025-10-21
